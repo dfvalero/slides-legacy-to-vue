@@ -1,49 +1,258 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+    <title>Legacy to Vue - Slides</title>
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css">
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section>
+            <h1>Legacy to Vue</h1>
+            <p>David Fernandez - <i>@frontendez</i></p>
+        </section>
+        <section>
+            <h2>Hola! Soy David!</h2>
+            <p>
+                Software Developer en Sonosuite
+                <br>
+                Barcelona
+                <br>
+                <a href="https://twitter.com/frontendez" target="_blank">@frontendez</a>
+            </p>
+        </section>
+        <section>
+            <h2>App</h2>
+            <p><a href="https://tanyo.es" target="_blank">https://tanyo.es</a></p>
+            <br>
+            <h2>Repositorio</h2>
+            <p><a href="https://github.com/dfvalero/legacy-to-vue" target="_blank">https://github.com/dfvalero/legacy-to-vue</a></p>
+            <p>3 ramas:</p>
+            <p>master(legacy), vue, vuex</p>
+        </section>
+        <section>
+            <h2>Que es legacy?</h2>
+        </section>
+        <section>
+            <h3>1. Sin estructura de ficheros ni de código</h3>
+            <img class="stretch" data-src="/images/slide-4.png">
+        </section>
+        <section>
+            <h3>2. Todo el CSS en un gran fichero</h3>
+            <img class="stretch" data-src="/images/slide-5.png">
+        </section>
+        <section>
+            <h3>3. Frontend mezclado con Backend</h3>
+            <img class="stretch" data-src="/images/slide-6.png">
+        </section>
+        <section>
+            <h3>4. Manipulación de DOM y lógica mezclada</h3>
+            <img class="stretch" data-src="/images/slide-7.png">
+        </section>
+        <section>
+            <h3>5. Código duplicado</h3>
+            <img class="stretch" data-src="/images/slide-8.png">
+        </section>
+        <section>
+            <h3>6. Variables y librerias globales</h3>
+            <img class="stretch" data-src="/images/slide-9.png">
+        </section>
+        <section>
+            <h3>7. Comunicación / Estado</h3>
+            <img class="stretch" data-src="/images/slide-10.png">
+        </section>
+        <section>
+            <h2>Refactor time!</h2>
+            <h3>Componentes con Vue</h3>
+        </section>
+        <section>
+            <h3>Package Manager</h3>
+            <img class="stretch" data-src="/images/slide-12.png">
+        </section>
+        <section>
+            <h3>Bundler - Webpack + Loaders</h3>
+            <p>EsLint</p>
+            <p>Vue Loader</p>
+            <p>SCSS Loader</p>
+            <p>Others (SVG, Images, etc)</p>
+        </section>
+        <section>
+            <h3>Configuración Webpack</h3>
+            <img class="stretch" data-src="/images/slide-14.png">
+        </section>
+        <section>
+            <h3>Entry Point - app.js</h3>
+            <img class="stretch" data-src="/images/slide-15.png">
+        </section>
+        <section>
+            <h3>Análisis de la Aplicación</h3>
+            <img class="stretch" data-src="/images/slide-16.png">
+        </section>
+        <section>
+            <h3>Entry Point - app.vue</h3>
+            <img class="stretch" data-src="/images/slide-17.png">
+        </section>
+        <section>
+            <h3>1. Estructura de Ficheros</h3>
+            <img class="stretch" data-src="/images/slide-18.png">
+        </section>
+        <section>
+            <h3>2. Estructura CSS - ITCSS + BEM</h3>
+            <img class="stretch" style="background: white" data-src="/images/slide-19.svg">
+        </section>
+        <section>
+            <h3>2. Estructura CSS - Ejemplo ITCSS</h3>
+            <h6>/scss/app.scss</h6>
+            <img class="stretch" data-src="/images/slide-20.png">
+        </section>
+        <section>
+            <h3>2. Estructura CSS - Ejemplo BEM</h3>
+            <h6>/components/box.vue</h6>
+            <img class="stretch" data-src="/images/slide-21.png">
+        </section>
+        <section>
+            <h3>3. Separación de Backend y Frontend</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-22.png">
+        </section>
+        <section>
+            <h3>4 y 5. Páginas Inteligentes y Componentes tontos</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-23.png">
+        </section>
+        <section>
+            <h3>4 y 5. Páginas Inteligentes y Componentes tontos</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-24.png">
+        </section>
+        <section>
+            <h3>4 y 5. Páginas Inteligentes y Componentes tontos</h3>
+            <h6>/components/dumb.vue</h6>
+            <img class="stretch" data-src="/images/slide-25.png">
+        </section>
+        <section>
+            <h3>4 y 5. Páginas Inteligentes y Componentes tontos</h3>
+            <h6>/components/box.vue</h6>
+            <img class="stretch" data-src="/images/slide-26.png">
+        </section>
+        <section>
+            <h3>6. No variables globales - ECMA Imports</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-27.png">
+        </section>
+        <section>
+            <h3>7. State Manager sin Vuex - Vue Bus</h3>
+            <img class="stretch" data-src="/images/slide-28.png">
+        </section>
+        <section>
+            <h3>7. State Manager sin Vuex - Vue Bus</h3>
+            <h6>/components/corner.vue</h6>
+            <img class="stretch" data-src="/images/slide-29.png">
+        </section>
+        <section>
+            <h3>7. State Manager sin Vuex - Vue Bus</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-30.png">
+        </section>
+        <section>
+            <h3>7. State Manager sin Vuex - Vue Bus</h3>
+            <h6>/app.vue</h6>
+            <img class="stretch" data-src="/images/slide-31.png">
+        </section>
+        <section>
+            <h2>Toque final</h2>
+            <h4>Sistema de templates con métodos: Vue</h4>
+            <h4>State Manager: Vuex</h4>
+        </section>
+        <section>
+            <h3>Store</h3>
+            <h6>State</h6>
+            <img class="stretch" data-src="/images/slide-33.png">
+        </section>
+        <section>
+            <h3>Store</h3>
+            <h6>Actions</h6>
+            <img class="stretch" data-src="/images/slide-34.png">
+        </section>
+        <section>
+            <h3>Store</h3>
+            <h6>Mutations</h6>
+            <img class="stretch" data-src="/images/slide-35.png">
+        </section>
+        <section>
+            <h3>Store</h3>
+            <h6>Getters</h6>
+            <img class="stretch" data-src="/images/slide-36.png">
+        </section>
+        <section>
+            <h3>Componentes y páginas aún más tontos/as</h3>
+            <h6>/pages/home.vue</h6>
+            <img class="stretch" data-src="/images/slide-37.png">
+        </section>
+        <section>
+            <h3>Componentes y páginas aún más tontos/as</h3>
+            <h6>/components/corner.vue</h6>
+            <img class="stretch" data-src="/images/slide-38.png">
+        </section>
+        <section>
+            <h3>Componentes y páginas aún más tontos/as</h3>
+            <h6>/app.vue</h6>
+            <img class="stretch" data-src="/images/slide-39.png">
+        </section>
+        <section>
+            <h2>Gracias!</h2>
+            <p><a href="https://tanyo.es" target="_blank">https://tanyo.es</a></p>
+            <br>
+            <h4>Repositorio</h4>
+            <p><a href="https://github.com/dfvalero/legacy-to-vue" target="_blank">https://github.com/dfvalero/legacy-to-vue</a></p>
+            <h6>3 ramas:</h6>
+            <p>master(legacy), vue-bus, vuex</p>
+        </section>
+        <section data-background-image="/images/applause.gif">
+            <h1>Gracias!</h1>
+        </section>
+    </div>
+</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
-			});
-		</script>
-	</body>
+<script>
+    // More info about config & dependencies:
+    // - https://github.com/hakimel/reveal.js#configuration
+    // - https://github.com/hakimel/reveal.js#dependencies
+    Reveal.initialize({
+        progress: true,
+        history: true,
+        controls: false,
+        dependencies: [
+            { src: 'plugin/markdown/marked.js' },
+            { src: 'plugin/markdown/markdown.js' },
+            { src: 'plugin/notes/notes.js', async: true },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
 </html>
